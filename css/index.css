@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+:root {
+
+    --color-bg: #FFF8F0;
+    --color-text: #382409;
+
+    --font-h1:font-family: "Afacad Flux", sans-serif;
+    --font-h2:font-family: "Afacad", sans-serif ;
+    --font-h3:;
+    --font-h4:;
+    --font-p:font-size: 1rem; font-family: "Afacad Flux", sans-serif;
+    --font-link:;
+
+}
+
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:"Afacad Flux", sans-serif, "Afacad", sans-serif;
+}
+
+
+
+
+
+h1 { 
+
+}
+
+h2 { 
+
+}
+
+h3{
+
+}
+
+h4{
+
+}
+
+p{
+
+}
+
+span{
+
+}
