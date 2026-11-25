@@ -4,9 +4,8 @@
 
     /* Color */
     --color-bg-page: #FFF8F0;
-    --color-bg-placeholder: #D9D9D9;
-    --color-text-primary: #382409;
-    --color-text-secondary: #66675F;
+    --color-text: #382409;
+    --color-text-second: #66675F;
     --color-text-accent: #7D6442;
     --color-text-inverse: #FFFCF6;
     --color-border: #382409;
@@ -23,7 +22,7 @@
     --space-96: 6rem;
     --space-128: 8rem;
 
-    /* Sizes (Design Tokens → size/*) */
+    /* Sizes */
     --size-canvas: 90rem;             /* 1440px */
     --size-container: 82rem;          /* 1312px */
     --size-container-narrow: 64rem;   /* 1024px */
@@ -34,7 +33,7 @@
     --radius-sm: .25rem;
     --radius-md: .5rem;
 
-    /* Fonts (grosor / tamaño / interlineado / familia) */
+    /* Fonts (grosor / tamaño / interlineado / familia)*/
     --font-display: 400 clamp(3rem, 6vw, 4rem)/1.125 "Afacad Flux", sans-serif;       
     --font-h1: 400 clamp(2rem, 4vw, 2.5rem)/1.2 "Afacad Flux", sans-serif;             
     --font-h2: 400 clamp(1.5rem, 3.5vw, 2rem)/1.25 "Afacad Flux", sans-serif;          
@@ -152,8 +151,8 @@ a, .font-link {
     margin: auto;
 }
 
-.header__logo {
-    max-width: 14rem; 
+.angela_logo_header {
+    max-width: 10rem; 
 }
 
 .nav__menu {
@@ -192,5 +191,19 @@ a, .font-link {
 .nav__menu{
     display: none;
 }
+
+}
+
+.hero {
+    
+
+}
+.hero__background {
+
+}
+.hero__block {
+
+}
+.angela__logo_hero {
 
 }
