@@ -1,52 +1,196 @@
-@import url('https://fonts.googleapis.com/css2?family=Afacad:ital,wght@0,400..700;1,400..700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
 
 :root {
 
-    --color-bg: #FFF8F0;
-    --color-text: #382409;
+    /* Color */
+    --color-bg-page: #FFF8F0;
+    --color-bg-placeholder: #D9D9D9;
+    --color-text-primary: #382409;
+    --color-text-secondary: #66675F;
+    --color-text-accent: #7D6442;
+    --color-text-inverse: #FFFCF6;
+    --color-border: #382409;
+    --color-action-primary: #382409;
 
-    --font-h1:font-family: "Afacad Flux", sans-serif;
-    --font-h2:font-family: "Afacad", sans-serif ;
-    --font-h3:;
-    --font-h4:;
-    --font-p:font-size: 1rem; font-family: "Afacad Flux", sans-serif;
-    --font-link:;
+    /* Spacing */
+    --space-4: .25rem;
+    --space-8: .5rem;
+    --space-16: 1rem;
+    --space-24: 1.5rem;
+    --space-32: 2rem;
+    --space-48: 3rem;
+    --space-64: 4rem;
+    --space-96: 6rem;
+    --space-128: 8rem;
 
+    /* Sizes (Design Tokens → size/*) */
+    --size-canvas: 90rem;             /* 1440px */
+    --size-container: 82rem;          /* 1312px */
+    --size-container-narrow: 64rem;   /* 1024px */
+    --size-header: 8rem;              /* 128px */
+    --size-footer: 6rem;              /* 96px */
+
+    /* Radius */
+    --radius-sm: .25rem;
+    --radius-md: .5rem;
+
+    /* Fonts (grosor / tamaño / interlineado / familia) */
+    --font-display: 400 clamp(3rem, 6vw, 4rem)/1.125 "Afacad Flux", sans-serif;       
+    --font-h1: 400 clamp(2rem, 4vw, 2.5rem)/1.2 "Afacad Flux", sans-serif;             
+    --font-h2: 400 clamp(1.5rem, 3.5vw, 2rem)/1.25 "Afacad Flux", sans-serif;          
+    --font-h2-strong: 700 clamp(1.5rem, 3.5vw, 2rem)/1.25 "Afacad Flux", sans-serif;   
+    --font-h3: 400 clamp(1.25rem, 3vw, 1.5rem)/1.333 "Afacad Flux", sans-serif;       
+    --font-body-lg: 400 1.25rem/1.4 "Afacad Flux", sans-serif;                        
+    --font-p: 400 1rem/1.5 "Afacad Flux", sans-serif;                                 
+    --font-xs: 400 .875rem/1.4286 "Afacad Flux", sans-serif;                       
+    --font-s: 600 .875rem/1.4286 "Afacad Flux", sans-serif;                 
+    --font-caption: 400 .75rem/1.333 "Afacad Flux", sans-serif;                        
 }
 
-* { 
+
+/******** GENERAL ********/
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:"Afacad Flux", sans-serif, "Afacad", sans-serif;
+    font-family: "Afacad Flux", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg-page);
+    color: var(--color-text-primary);
+    font: var(--font-p);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/************************ TYPOGRAPHY *****************************/
+
+.heading-display { 
+    font: var(--font-display); 
+}
+
+h1, .heading-h1 { 
+    font: var(--font-h1); 
+}
+
+h2, .heading-h2 { 
+    font: var(--font-h2); 
+}
+
+.heading-h2--strong { 
+    font: var(--font-h2-strong); 
+}
+
+h3, .heading-h3 { 
+    font: var(--font-h3); 
+}
+
+.font-body-lg { 
+    font: var(--font-body-lg); 
+}
+
+p, span, li, .font-p { 
+    font: var(--font-p); 
+}
+
+a, .font-link { 
+    font: var(--font-small); 
+}
+
+.font-caption { 
+    font: var(--font-caption); 
+}
+
+.text-secondary { 
+    color: var(--color-text-secondary); 
+}
+
+.text-accent { 
+    color: var(--color-text-accent); 
+}
+
+.block {
+    max-width: var(--size-block);
+    margin: 0 auto;
+}
+
+.section {
+    padding: var(--size-lg) var(--size-sm);
+    max-width: var(--size-canvas);
+    margin: 0 auto;
 }
 
 
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-8) var(--space-64);
+    background-color: var(--color-bg-page);
 
+    max-width: var(--size-canvas);
+    margin: auto;
+}
 
+.header__logo {
+    max-width: 14rem; 
+}
 
-h1 { 
+.nav__menu {
+ 
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-64);
 
 }
 
-h2 { 
+.menu__link {
+    color: var(--color-text-accent);
+
+     &:hover{
+        color: var(--color-text-primary);
+    }
+}
+
+.icono__menu__mobile__tablet{
+    display: none;
+    
+@media (max-width:768px){
+    display: inline-block;
+}
 
 }
 
-h3{
+.nav__menu{
+    display: flex;
+    
 
 }
 
-h4{
-
+@media (max-width: 768px) {
+.nav__menu{
+    display: none;
 }
-
-p{
-
-}
-
-span{
 
 }
